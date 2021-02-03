@@ -1,21 +1,21 @@
 import React from 'react';
 
-import {emojify} from 'react-emojione';
+import { emojify } from 'react-emojione';
 
 function hashCode(str) { // java String#hashCode
-    var hash = 0;
-    for (var i = 0; i < str.length; i++) {
-       hash = str.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    return hash;
+  let hash = 0;
+  for (let i = 0; i < str.length; i += 1) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return hash;
 }
 
-function intToRGB(i){
-    var c = (i & 0x00FFFFFF)
-        .toString(16)
-        .toUpperCase();
+function intToRGB(i) {
+  const c = (i & 0x00FFFFFF)
+    .toString(16)
+    .toUpperCase();
 
-    return "00000".substring(0, 6 - c.length) + c;
+  return "00000".substring(0, 6 - c.length) + c;
 }
 
 
