@@ -14,13 +14,12 @@ class MessageList extends Component {
   componentDidMount() {
     const intervalID = window.setInterval(
       () => this.props.fetchMessages(this.props.selectedChannel),
-      3000
+      5000
     );
     this.setState({ intervalID });
   }
 
   componentDidUpdate() {
-    console.log('scrolling?');
     this.list.scrollTop = this.list.scrollHeight;
   }
 

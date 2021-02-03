@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {emojify} from 'react-emojione';
 
 function hashCode(str) { // java String#hashCode
     var hash = 0;
@@ -29,10 +30,10 @@ const Message = (props) => {
   return (
     <div className="message-container">
       <i className="username">
-        <span style={styles}>{ author }</span>
+        <span style={styles}>{ emojify(author) }</span>
         <small className="date">{ time }</small>
       </i>
-      <p>{content}</p>
+      <p>{emojify(content)}</p>
     </div>
   );
 };
