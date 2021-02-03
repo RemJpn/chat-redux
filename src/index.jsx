@@ -31,8 +31,8 @@ const initialState = {
     }
   ],
   selectedChannel: 'general',
-  currentUser: 'moi'
-  // currentUser: prompt('What is your name?') || `anonymous${Math.floor(10 + (Math.random() * 90))}`
+  // currentUser: 'moi'
+  currentUser: prompt('What is your name?') || `anonymous${Math.floor(10 + (Math.random() * 90))}`
 };
 
 // State and reducers
